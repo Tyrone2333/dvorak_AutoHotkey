@@ -1,0 +1,55 @@
+
+<html>
+<script type="text/javascript">
+var character = new Array("!","@","#","$","%","^","&","*","(",")");
+
+for(var i=0;i<10;i++)
+{
+	var j = i+1;
+document.write("+"+character[i]+"::Send {"+j+"}"+"<br>");
+
+document.write(j+"::"+character[i]+"<br>");
+}
+</script>
+<table>
+<thead>
+<tr>
+<th>按键符号</th>
+<th>代表的按键与说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>^</td>
+<td width="648">〔Ctrl〕键</td>
+</tr>
+<tr>
+<td>!</td>
+<td>〔Alt〕键</td>
+</tr>
+<tr>
+<td>+</td>
+<td>〔Shift〕键</td>
+</tr>
+<tr>
+<td>#</td>
+<td>〔Win〕键</td>
+</tr>
+<tr>
+<td>&</td>
+<td>用 & 符号把两个按键或按钮组合成为一个键，例如：LButton & a 表示按左钮不放，同时再按〔a〕键</td>
+</tr>
+<tr>
+<td>~</td>
+<td>加 ~ 符号表示<strong>不抑制</strong>该按键，使用在当我们想要把某个按键做额外输出的场合。例如：
+<pre>; 不抑制原来的〔a〕键，〔a〕键替换成 aBBB
+~a::Send BBB
+; 按〔a〕键输出 BBB，抑制原来的按键输出
+a::Send BBB
+</pre>
+</td>
+</tr>
+</tbody>
+</table>
+
+</html>
