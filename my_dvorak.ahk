@@ -41,8 +41,8 @@ n::b
 ,::w
 .::v
 /::z
-
-;;交换字母区上方的数字
+/*
+;;交换字母区上方的数字,因中文输入法问题暂时放弃交换数字
 #usehook
 
 +!::Send {1}
@@ -66,7 +66,7 @@ n::b
 9::(
 +)::Send {0}
 0::)
-
+*/
 
 ;	=Dvorak Hot Key Fixes ( Autohotkey )
 ;	替换CTRL ALT WIN 键
