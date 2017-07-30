@@ -79,6 +79,7 @@ n::b
 *^z::Send ^z
 *^w::Send ^w
 *^s::Send ^s
+*^f::Send ^f
 ;----------------- ALT KEY
 
 *![::Send !-
