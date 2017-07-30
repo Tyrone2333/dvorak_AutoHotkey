@@ -12,8 +12,8 @@ r::p
 t::y
 y::f
 u::g
-i::c
-o::r
+i::r
+o::c
 p::l
 [::/
 ;; 中行
@@ -33,8 +33,8 @@ l::n
 +z::Send {[}
 z::{
 x::q
-c::j
-v::k
+c::k
+v::j
 b::x
 n::b
 ;m::m
