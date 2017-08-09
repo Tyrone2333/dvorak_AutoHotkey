@@ -8,20 +8,20 @@
 q::;
 w::,
 e::.
-r::p
-t::y
+r::u
+t::c
 y::f
-u::g
+u::y
 i::r
-o::c
-p::l
+o::l
+p::p
 [::/
 ;; 中行
 ;a::a
 s::o
 d::e
-f::u
-g::i
+f::i
+g::g
 h::d
 j::h
 k::t
@@ -32,10 +32,10 @@ l::n
 ;; 下行封号需转义`;
 +z::Send {[}
 z::{
-x::q
+x::x
 c::k
 v::j
-b::x
+b::q
 n::b
 ;m::m
 ,::w
@@ -67,7 +67,8 @@ n::b
 +)::Send {0}
 0::)
 */
-
++(::Send {9}
+9::(
 ;	=Dvorak Hot Key Fixes ( Autohotkey )
 ;	替换CTRL ALT WIN 键
 ;--------------------------------------
@@ -80,6 +81,7 @@ n::b
 *^w::Send ^w
 *^s::Send ^s
 *^f::Send ^f
+*^d::Send ^d
 ;----------------- ALT KEY
 
 *![::Send !-
