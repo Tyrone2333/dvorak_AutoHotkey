@@ -8,14 +8,14 @@ DVORAK_DIR := "F:\Code\html code\dvorak_AutoHotkey"
 
 Run "my_dvorak.exe"
 
-^!Numpad0::
+#Numpad0::
 	dvorakActive := false
-	SoundPlay, %A_WinDir%\Media\Windows ��̾��.wav
+	;; SoundPlay, %A_WinDir%\Media\Windows Error.wav
 	SoundPlay *64
 	Process,Close,my_dvorak.exe
 return
 
-^!Numpad1::
+#Numpad1::
 	SoundPlay *48
 	Run "%DVORAK_DIR%/my_dvorak.exe"
 return
