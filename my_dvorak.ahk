@@ -1,7 +1,17 @@
 ﻿#SingleInstance force
-;#InstallKeybdHook
+#InstallKeybdHook
 ;#InstallMouseHook
 
+
+; 按键说明
+/*
+
+# Win (Windows 徽标键). 在 v1.0.48.01+, 对于 Windows Vista 及以上版本, 包含 Windows 键的热键 (例如 #a) 会等待 Windows 键被释放后才发送任何包含 "L" 键击的文本. 这样避免了这种热键中的 Send 锁定 PC. 这种行为适用于除 SendPlay (这里不需要) 和 盲从模式 外的所有发送模式. 
+! Alt 
+^ Control 
++ Shift 
+
+*/
 
 ;;;;;;;;;;;;;;;;;;;;;;;; dvorak ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; home row
@@ -71,7 +81,15 @@ n::b
 */
 +(::Send {9}
 9::(
-;	=Dvorak Hot Key Fixes ( Autohotkey )
+
+;  发送箭头函数,需视 ide 的自动补全调整  
+:*:00::
+     Send, `(res{Right} `=> {`{} {Left} {Enter}
+return
+
++)::Send {0}
+
+;	=Dvorak Hot Key Fixes ( Autohotkey )  
 ;	替换CTRL ALT WIN 键
 ;--------------------------------------
 ;----------------- CTRL KEY
@@ -84,6 +102,7 @@ n::b
 *^s::Send ^s
 *^f::Send ^f
 *^d::Send ^d
+
 ;----------------- ALT KEY
 
 *![::Send !-
@@ -104,7 +123,11 @@ n::b
 
 *!o::Send !s
 *!e::Send !d
-*!u::Send !f
+; 由于 Gmail 前面有字母,在中文状态下会被输入法输出中文,所以邮箱用 QQ邮箱
+*!u::
+    Send, 424021424@qq.com
+return
+
 *!i::Send !g
 *!d::Send !h
 *!h::Send !j
@@ -129,4 +152,9 @@ n::b
 *#e::Send #e
 *#d::Send #d
 *#r::Send #r ;;cmd
+
+;----------------- 小键盘
+::Numpad0::Send {0}
+
+
 ;END Dvorak Hot Key Fixes
