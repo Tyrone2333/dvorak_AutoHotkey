@@ -17,5 +17,5 @@ return
 
 #Numpad1::
 	SoundPlay *48
-	Run "%DVORAK_DIR%/my_dvorak.exe"
+	Run "my_dvorak.exe"
 return

@@ -87,7 +87,6 @@ n::b
      Send, `(res{Right} `=> {`{} {Left} {Enter}
 return
 
-+)::Send {0}
 
 ;	=Dvorak Hot Key Fixes ( Autohotkey )  
 ;	替换CTRL ALT WIN 键
@@ -154,7 +153,7 @@ return
 *#r::Send #r ;;cmd
 
 ;----------------- 小键盘
-::Numpad0::Send {0}
+::Numpad0Numpad0::Send {00}
 
 
 ;END Dvorak Hot Key Fixes
