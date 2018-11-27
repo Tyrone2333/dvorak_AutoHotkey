@@ -83,7 +83,8 @@ n::b
 9::(
 
 ;  发送箭头函数,需视 ide 的自动补全调整  
-:*:00::
+; :*:00::
+:*:77::
      Send, `(res{Right} `=> {`{} {Left} {Enter}
 return
 
@@ -153,7 +154,7 @@ return
 *#r::Send #r ;;cmd
 
 ;----------------- 小键盘
-::Numpad0Numpad0::Send {00}
+; ::Numpad0Numpad0::Send {00}
 
 
 ;END Dvorak Hot Key Fixes
