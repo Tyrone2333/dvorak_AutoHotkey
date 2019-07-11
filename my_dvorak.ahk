@@ -6,10 +6,10 @@
 ; 按键说明
 /*
 
-# Win (Windows 徽标键). 在 v1.0.48.01+, 对于 Windows Vista 及以上版本, 包含 Windows 键的热键 (例如 #a) 会等待 Windows 键被释放后才发送任何包含 "L" 键击的文本. 这样避免了这种热键中的 Send 锁定 PC. 这种行为适用于除 SendPlay (这里不需要) 和 盲从模式 外的所有发送模式. 
-! Alt 
-^ Control 
-+ Shift 
+# Win (Windows 徽标键). 在 v1.0.48.01+, 对于 Windows Vista 及以上版本, 包含 Windows 键的热键 (例如 #a) 会等待 Windows 键被释放后才发送任何包含 "L" 键击的文本. 这样避免了这种热键中的 Send 锁定 PC. 这种行为适用于除 SendPlay (这里不需要) 和 盲从模式 外的所有发送模式.
+! Alt
+^ Control
++ Shift
 
 */
 
@@ -82,14 +82,17 @@ n::b
 +(::Send {9}
 9::(
 
-;  发送箭头函数,需视 ide 的自动补全调整  
+; 发送箭头函数,需视 ide 的自动补全调整
 ; :*:00::
 :*:77::
      Send, `(res{Right} `=> {`{} {Left} {Enter}
 return
+; jsx 方便写空箭头函数
+:*:88::
+     Send, `({Right} `=> this.
+return
 
-
-;	=Dvorak Hot Key Fixes ( Autohotkey )  
+;	=Dvorak Hot Key Fixes ( Autohotkey )
 ;	替换CTRL ALT WIN 键
 ;--------------------------------------
 ;----------------- CTRL KEY

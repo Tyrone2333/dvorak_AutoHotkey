@@ -2,9 +2,9 @@
 #SingleInstance force
 
 dvorakActive := true
-DVORAK_DIR := "F:\Code\html code\dvorak_AutoHotkey"
+; DVORAK_DIR := "F:\Code\html code\dvorak_AutoHotkey"
 
- ;Run "%DVORAK_DIR%/qwer.ahk"
+; Run "%DVORAK_DIR%/qwer.ahk"
 
 Run "my_dvorak.exe"
 
