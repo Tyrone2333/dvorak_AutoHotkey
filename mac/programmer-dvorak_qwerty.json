@@ -1,0 +1,28 @@
+{
+  "title": "Programmer Dvorak",
+  "rules": [
+    {
+      "description": "Programmer Dvorak - QWERTY Switcher",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_option",
+                "left_control",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'DVORAK'"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
