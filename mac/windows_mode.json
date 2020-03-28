@@ -1,0 +1,732 @@
+{
+	"title": "Windows Mode",
+	"rules": [
+		{
+			"description": "Cycle left meta keys:   [ctrl, opt, cmd]   ->   [cmd, ctrl, opt]",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "left_control",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "left_command"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_option",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "left_control"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_command",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "left_option"}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Cycle left meta keys (for compact keyboards):   [fn, ctrl, opt, cmd]   ->   [cmd, fn, ctrl, opt]",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "fn",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "left_command"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_control",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "fn"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_option",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "left_control"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_command",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "left_option"}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Cycle right meta keys:   [cmd, opt, ctrl]   ->   [opt, ctrl, cmd]",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "right_command",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "right_option"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_option",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "right_control"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_control",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "right_option"}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Cycle right meta keys (for compact keyboards):   [cmd, alt]   ->   [alt, cmd]",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "right_command",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "right_option"}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_option",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [{"key_code": "right_command"}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Swap command+Q and option+f4 shortcuts",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "q",
+						"modifiers": {
+							"mandatory": ["left_command"]
+						}
+					},
+					"to": [{
+						"key_code": "f4",
+						"modifiers": "left_option"
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "f4",
+						"modifiers": {
+							"mandatory": ["left_option"]
+						}
+					},
+					"to": [{
+						"key_code": "q",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "q",
+						"modifiers": {
+							"mandatory": ["right_command"]
+						}
+					},
+					"to": [{
+						"key_code": "f4",
+						"modifiers": "right_option"
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "f4",
+						"modifiers": {
+							"mandatory": ["right_option"]
+						}
+					},
+					"to": [{
+						"key_code": "q",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Change cmd+tab and cmd+` shortcuts to use option instead (useful after cycling meta keys; needs next rule to \"balance out\" arrows)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "tab",
+						"modifiers": {"mandatory": ["left_option"]}
+					},
+					"to": [{
+						"key_code": "tab",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "tab",
+						"modifiers": {"mandatory": ["left_command"]}
+					},
+					"to": [{
+						"key_code": "tab",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "tab",
+						"modifiers": {"mandatory": ["right_option"]}
+					},
+					"to": [{
+						"key_code": "tab",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "tab",
+						"modifiers": {"mandatory": ["right_command"]}
+					},
+					"to": [{
+						"key_code": "tab",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": {"mandatory": ["left_option"]}
+					},
+					"to": [{
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": {"mandatory": ["left_command"]}
+					},
+					"to": [{
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": {"mandatory": ["right_option"]}
+					},
+					"to": [{
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": {"mandatory": ["right_command"]}
+					},
+					"to": [{
+						"key_code": "grave_accent_and_tilde",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Swap cmd+arrows and opt+arrows shortcuts (fixes word/paragraph-jumping ergonomics; fixes arrows when switching windows if used with previous rule, otherwise breaks)",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "up_arrow",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "up_arrow",
+						"modifiers": {
+							"mandatory": ["left_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_arrow",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "right_arrow",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_arrow",
+						"modifiers": {
+							"mandatory": ["left_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "right_arrow",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "down_arrow",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "down_arrow",
+						"modifiers": {
+							"mandatory": ["left_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_arrow",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "left_arrow",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_arrow",
+						"modifiers": {
+							"mandatory": ["left_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "left_arrow",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "up_arrow",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "up_arrow",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_arrow",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "right_arrow",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "right_arrow",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "right_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "down_arrow",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "down_arrow",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_arrow",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "left_arrow",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "left_arrow",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "left_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Make cmd+backspace and cmd+delete work like ctrl+backspace/delete in Windows",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "delete_or_backspace",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_or_backspace",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_or_backspace",
+						"modifiers": {
+							"mandatory": ["left_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_or_backspace",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_or_backspace",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_or_backspace",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_or_backspace",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_or_backspace",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_forward",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_forward",
+						"modifiers": ["left_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_forward",
+						"modifiers": {
+							"mandatory": ["left_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_forward",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_forward",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_forward",
+						"modifiers": ["right_option"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "delete_forward",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "delete_forward",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				}
+			]
+		},
+		{
+			"description": "Change Home and End to behave like in Windows",
+			"manipulators": [
+				{
+					"from": {
+						"key_code": "home",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+        {
+					"from": {
+						"key_code": "home",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "home",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "up_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "home",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [
+						{
+							"key_code": "left_arrow",
+							"modifiers": ["right_command"]
+						}
+					],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "end",
+						"modifiers": {
+							"mandatory": ["left_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["left_command"]
+					}],
+					"type": "basic"
+				},
+        {
+					"from": {
+						"key_code": "end",
+						"modifiers": {
+							"mandatory": ["right_option"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "end",
+						"modifiers": {
+							"mandatory": ["right_command"],
+							"optional": ["any"]
+						}
+					},
+					"to": [{
+						"key_code": "down_arrow",
+						"modifiers": ["right_command"]
+					}],
+					"type": "basic"
+				},
+				{
+					"from": {
+						"key_code": "end",
+						"modifiers": {"optional": ["any"]}
+					},
+					"to": [
+						{
+							"key_code": "right_arrow",
+							"modifiers": ["right_command"]
+						}
+					],
+					"type": "basic"
+				}
+			]
+		}
+	]
+}
