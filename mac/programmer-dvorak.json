@@ -1116,60 +1116,14 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "quote"
-          },
-          "to": [
-            {
-              "key_code": "hyphen"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "quote",
-            "modifiers": {
-              "mandatory": [
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "hyphen",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "quote",
-            "modifiers": {
-              "mandatory": [
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "hyphen",
-              "modifiers": [
-                "right_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
             "key_code": "z"
           },
           "to": [
             {
-              "key_code": "open_bracket"
+              "key_code": "open_bracket",
+              "modifiers": [
+                "left_shift"
+              ]
             }
           ]
         },
@@ -1192,26 +1146,6 @@
             }
           ]
         },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "z",
-            "modifiers": {
-              "mandatory": [
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "open_bracket",
-              "modifiers": [
-                "right_shift"
-              ]
-            }
-          ]
-        },
-
         {
           "type": "basic",
           "from": {
