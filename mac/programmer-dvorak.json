@@ -7,12 +7,10 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "k",
+            "key_code": "keypad_0",
             "modifiers": {
               "mandatory": [
-                "left_option",
-                "left_control",
-                "left_command"
+                "left_option"
               ]
             }
           },
@@ -25,84 +23,18 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "grave_accent_and_tilde"
-          },
-          "to": [
-            {
-              "key_code": "4",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "grave_accent_and_tilde",
+            "key_code": "k",
             "modifiers": {
               "mandatory": [
-                "left_shift"
+                "left_option",
+                "left_control",
+                "left_command"
               ]
             }
           },
           "to": [
             {
-              "key_code": "grave_accent_and_tilde",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "grave_accent_and_tilde",
-            "modifiers": {
-              "mandatory": [
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "equal_sign",
-            "modifiers": {
-              "mandatory": [
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "equal_sign",
-            "modifiers": {
-              "mandatory": [
-                "right_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde"
+              "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'QWERTY'"
             }
           ]
         },
