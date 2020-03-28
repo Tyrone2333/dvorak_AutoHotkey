@@ -7,6 +7,22 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "keypad_1",
+            "modifiers": {
+              "mandatory": [
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'DVORAK'"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "j",
             "modifiers": {
               "mandatory": [
