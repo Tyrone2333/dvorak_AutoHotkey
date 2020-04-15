@@ -69,3 +69,6 @@ alt + 1 切换到 dvorak
 ## mac 的其他快捷键修改
 
 ![需要安装的json](./reference/5A55DA26-0268-4DBD-90D0-8D978A41E290.png)
+
+## mac 下鼠标无法使用侧键前进后退
+加载 `mouse-browser-back.json`,目前用的毒蝰 mini 完美,在 idea 也能退回上次位置
