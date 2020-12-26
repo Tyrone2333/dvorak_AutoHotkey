@@ -20,6 +20,7 @@ mac 的修改实现使用了 [`Karabiner-Elements`](https://karabiner-elements.p
 ### 2.1.1. Copy JSON rules
 
 Copy `programmer-dvorak.json` to `/Users/{your-name}/.config/karabiner/assets/complex_modifications`
+(Command + Shift +. To show hidden files)
 
 ### 2.1.2. Create Profiles
 Create one profile called `QWERTY` and one profile called `DVORAK`. Names must be exact.
