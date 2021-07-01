@@ -84,16 +84,6 @@ n::b
 +(::Send {9}
 9::(
 
-; 发送箭头函数,需视 ide 的自动补全调整
-; :*:00::
-:*:77::
-     Send, `(res{Right} `=> {`{} {Left} {Enter}
-return
-; jsx 方便写空箭头函数
-:*:88::
-     Send, `({Right} `=> this.
-return
-
 ;	=Dvorak Hot Key Fixes ( Autohotkey )
 ;	替换CTRL ALT WIN 键
 ;--------------------------------------
@@ -128,10 +118,6 @@ return
 
 *!o::Send !s
 *!e::Send !d
-; 由于 Gmail 前面有字母,在中文状态下会被输入法输出中文,所以邮箱用 QQ邮箱
-*!u::
-    Send, 424021424@qq.com
-return
 
 *!i::Send !g
 *!d::Send !h
