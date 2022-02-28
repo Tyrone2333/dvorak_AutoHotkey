@@ -74,3 +74,7 @@ alt + 1 切换到 dvorak
 
 ## 2.5. mac 下鼠标无法使用侧键前进后退
 加载 `mouse-browser-back.json`,目前用的毒蝰 mini 完美,在 idea 也能退回上次位置
+
+## 卸载
+
+sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
