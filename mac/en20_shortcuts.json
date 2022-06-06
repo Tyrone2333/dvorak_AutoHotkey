@@ -2,7 +2,38 @@
   "title": "en20 - shortcuts",
   "rules": [
     {
-      "description": "en20 的常用快捷键",
+      "description": "en20 系统: alt+tab 切换应用",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "mandatory": ["left_control"]
+            }
+          },
+          "to": [{
+            "key_code": "tab",
+            "modifiers": ["left_command"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "`",
+            "modifiers": {
+              "mandatory": ["left_control"]
+            }
+          },
+          "to": [{
+            "key_code": "`",
+            "modifiers": ["left_command"]
+          }]
+        }
+      ]
+    },
+    {
+      "description": "en20 浏览器: ,f5刷新,f12,ctrl+w ",
       "manipulators": [
         {
           "type": "basic",
