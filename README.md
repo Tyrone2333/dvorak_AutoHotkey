@@ -18,8 +18,10 @@ mac 的修改实现使用了 [`Karabiner-Elements`](https://karabiner-elements.p
 ## 2.1. Installation
 
 ### 2.1.1. Copy JSON rules
-
-Copy `programmer-dvorak.json` to `/Users/{your-name}/.config/karabiner/assets/complex_modifications`
+```bash
+open /Users/$USER/.config/karabiner/assets/complex_modifications
+```
+Copy `programmer-dvorak.json` to this folder
 (Command + Shift +. To show hidden files)
 
 ### 2.1.2. Create Profiles
@@ -70,7 +72,7 @@ alt + 1 切换到 dvorak
 
 ## 2.4. mac 的其他快捷键修改
 
-![需要安装的json](./reference/5A55DA26-0268-4DBD-90D0-8D978A41E290.png)
+![需要安装的json](./reference/AF9C7822-9E19-499E-BA68-23C614B4BE75.png)
 
 ## 2.5. mac 下鼠标无法使用侧键前进后退
 加载 `mouse-browser-back.json`,目前用的毒蝰 mini 完美,在 idea 也能退回上次位置
