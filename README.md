@@ -5,12 +5,6 @@
 
 非常感谢 TANG ZhiXiong 给了我的布局很大参考 https://github.com/district10/neo_keyboard_layout
 
-## 1.1. 添加一些自定义的快捷键
-- 77 = (res) => { } 
- 
-- alt + y = 邮箱
-
-
 # 2. Mac
 
 mac 的修改实现使用了 [`Karabiner-Elements`](https://karabiner-elements.pqrs.org/docs/).
@@ -80,3 +74,7 @@ alt + 1 切换到 dvorak
 ## 卸载
 
 sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
+
+# todo
+
+mac 版实现了 : ; 对调,但是 win 一直不知道如何实现
