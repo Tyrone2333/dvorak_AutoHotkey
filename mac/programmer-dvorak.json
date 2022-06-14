@@ -1081,6 +1081,25 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": [
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "right_shift"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "c"
           },
           "to": [
