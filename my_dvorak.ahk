@@ -76,13 +76,9 @@ n::b
 7::&
 +*::Send {8}
 8::*
-+(::Send {9}
-9::(
 +)::Send {0}
 0::)
 */
-+(::Send {9}
-9::(
 
 ;	=Dvorak Hot Key Fixes ( Autohotkey )
 ;	替换CTRL ALT WIN 键
