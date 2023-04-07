@@ -71,10 +71,40 @@ alt + 1 切换到 dvorak
 ## 2.5. mac 下鼠标无法使用侧键前进后退
 加载 `mouse-browser-back.json`,目前用的毒蝰 mini 完美,在 idea 也能退回上次位置
 
-## 卸载
+## 2.6. 卸载
 
 sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 
-# todo
+# 3. Rime 配置
+
+使用的 Rime 配置：雾凇拼音
+
+https://github.com/iDvel/rime-ice
+
+### 3.1. 个人需求
+#### 3.1.1. shift 切换英文
+
+default.yaml 修改 `Shift_L: commit_code` 然后系统偏好输入法里取消掉 `使用大写锁定键切换ABC`
+
+```yaml
+ascii_composer:
+  good_old_caps_lock: true  # true | false
+  switch_key:
+    Caps_Lock: clear  # commit_code | commit_text | clear
+    Shift_L: commit_code     # commit_code | commit_text | inline_ascii | clear | noop
+
+```
+
+#### 3.1.2. 默认英文标点
+```
+- name: ascii_punct
+  states: [ 。，, ．， ]
+  reset: 0
+```
+把 reset 改成 1，就默认永远是英文标点。
+Ctrl+Shift+3 临时切换。
+注释掉 reset 并使用方案选单切换，是永久切换。
+
+# 4. todo
 
 mac 版实现了 : ; 对调,但是 win 一直不知道如何实现
