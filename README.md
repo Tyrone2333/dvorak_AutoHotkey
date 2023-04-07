@@ -81,6 +81,10 @@ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 
 https://github.com/iDvel/rime-ice
 
+作者博客: https://dvel.me/posts/rime-ice/
+
+自己仓库: https://github.com/Tyrone2333/rime-ice
+
 ### 3.1. 个人需求
 #### 3.1.1. shift 切换英文
 
