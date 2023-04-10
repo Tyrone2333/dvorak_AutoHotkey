@@ -100,7 +100,9 @@ ascii_composer:
 ```
 
 #### 3.1.2. 默认英文标点
-```
+rime_ice.schema.yaml
+
+```yaml
 - name: ascii_punct
   states: [ 。，, ．， ]
   reset: 0
@@ -109,6 +111,24 @@ ascii_composer:
 Ctrl+Shift+3 临时切换。
 注释掉 reset 并使用方案选单切换，是永久切换。
 
+#### 3.1.3. 模糊音
+rime_ice.schema.yaml
+
+```yaml
+speller:
+  algebra:
+    ### 模糊音
+    # 声母
+    - derive/^([zcs])h/$1/          # z c s → zh ch sh
+    - derive/^([zcs])([^h])/$1h$2/  # zh ch sh → z c s
+    # 韵母
+    - derive/ang/an/
+    - derive/an/ang/
+    - derive/eng/en/
+    - derive/en/eng/
+    - derive/in/ing/
+    - derive/ing/in/
+```
 # 4. todo
 
 mac 版实现了 : ; 对调,但是 win 一直不知道如何实现
