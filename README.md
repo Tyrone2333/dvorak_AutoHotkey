@@ -129,6 +129,17 @@ speller:
     - derive/in/ing/
     - derive/ing/in/
 ```
+
+#### 3.1.4. 自定义文本
+custom_phrase.txt
+
+以 Tab 分割：汉字<Tab>编码<Tab>权重
+
+示例:
+```text
+想想	xx	2
+想象	xx	1
+```
 # 4. todo
 
 mac 版实现了 : ; 对调,但是 win 一直不知道如何实现
