@@ -133,7 +133,7 @@ speller:
 #### 3.1.4. 自定义文本
 custom_phrase.txt
 
-以 Tab 分割：汉字<Tab>编码<Tab>权重
+以 Tab 分割：汉字`<Tab>`编码`<Tab>`权重
 
 示例:
 ```text
