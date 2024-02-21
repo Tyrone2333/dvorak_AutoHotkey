@@ -71,10 +71,75 @@ alt + 1 切换到 dvorak
 ## 2.5. mac 下鼠标无法使用侧键前进后退
 加载 `mouse-browser-back.json`,目前用的毒蝰 mini 完美,在 idea 也能退回上次位置
 
-## 卸载
+## 2.6. 卸载
 
 sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 
-# todo
+# 3. Rime 配置
+
+使用的 Rime 配置：雾凇拼音
+
+https://github.com/iDvel/rime-ice
+
+作者博客: https://dvel.me/posts/rime-ice/
+
+自己仓库: https://github.com/Tyrone2333/rime-ice
+
+### 3.1. 个人需求
+#### 3.1.1. shift 切换英文
+
+default.yaml 修改 `Shift_L: commit_code` 然后系统偏好输入法里取消掉 `使用大写锁定键切换ABC`
+
+```yaml
+ascii_composer:
+  good_old_caps_lock: true  # true | false
+  switch_key:
+    Caps_Lock: clear  # commit_code | commit_text | clear
+    Shift_L: commit_code     # commit_code | commit_text | inline_ascii | clear | noop
+
+```
+
+#### 3.1.2. 默认英文标点
+rime_ice.schema.yaml
+
+```yaml
+- name: ascii_punct
+  states: [ 。，, ．， ]
+  reset: 0
+```
+把 reset 改成 1，就默认永远是英文标点。
+Ctrl+Shift+3 临时切换。
+注释掉 reset 并使用方案选单切换，是永久切换。
+
+#### 3.1.3. 模糊音
+rime_ice.schema.yaml
+
+```yaml
+speller:
+  algebra:
+    ### 模糊音
+    # 声母
+    - derive/^([zcs])h/$1/          # z c s → zh ch sh
+    - derive/^([zcs])([^h])/$1h$2/  # zh ch sh → z c s
+    # 韵母
+    - derive/ang/an/
+    - derive/an/ang/
+    - derive/eng/en/
+    - derive/en/eng/
+    - derive/in/ing/
+    - derive/ing/in/
+```
+
+#### 3.1.4. 自定义文本
+custom_phrase.txt
+
+以 Tab 分割：汉字`<Tab>`编码`<Tab>`权重
+
+示例:
+```text
+想想	xx	2
+想象	xx	1
+```
+# 4. todo
 
 mac 版实现了 : ; 对调,但是 win 一直不知道如何实现
