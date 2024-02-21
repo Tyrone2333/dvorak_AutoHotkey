@@ -49,7 +49,9 @@ z::{
 x::x
 c::k
 v::j
-b::;
+#UseHook on
+b::SendInput, :
++b::SendInput, `;
 n::b
 ;m::m
 ,::w
